@@ -1,0 +1,12 @@
+<odoo>
+  <menuitem id="menu_testbank_root" name="Test Bank" sequence="1"/>
+  
+  <menuitem id="menu_testbank_banks" name="Banks"
+            parent="menu_testbank_root" action="action_testbank_banks"/>
+
+  <record id="action_testbank_banks" model="ir.actions.act_window">
+    <field name="name">Banks</field>
+    <field name="res_model">test.bank</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+</odoo>

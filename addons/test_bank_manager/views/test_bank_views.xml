@@ -1,0 +1,36 @@
+<odoo>
+  <record id="view_test_bank_tree" model="ir.ui.view">
+    <field name="name">test.bank.question.tree</field>
+    <field name="model">test.bank.question</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="category"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_test_bank_form" model="ir.ui.view">
+    <field name="name">test.bank.question.form</field>
+    <field name="model">test.bank.question</field>
+    <field name="arch" type="xml">
+      <form>
+        <group>
+          <field name="name"/>
+          <field name="answer"/>
+          <field name="category"/>
+        </group>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_test_bank" model="ir.actions.act_window">
+    <field name="name">Test Bank</field>
+    <field name="res_model">test.bank.question</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="menu_test_bank_root" name="Test Bank" sequence="10"/>
+  <menuitem id="menu_test_bank_questions" name="Questions"
+            parent="menu_test_bank_root" action="action_test_bank"/>
+</odoo>
